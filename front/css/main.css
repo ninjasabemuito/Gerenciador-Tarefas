@@ -1,0 +1,236 @@
+/* Variáveis de Cores - Estilo Aura Blue */
+:root {
+    --primary-blue: #2563eb;
+    --dark-blue: #1e40af;
+    --light-blue: #dbeafe;
+    --success-green: #10b981;
+    --danger-red: #ef4444;
+    --bg-gray: #f1f5f9;
+    --text-dark: #1e293b;
+    --text-light: #64748b;
+    --white: #ffffff;
+    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+/* Reset e Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background-color: var(--bg-gray);
+    color: var(--text-dark);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Containers */
+.container, .dashboard-container {
+    width: 100%;
+    max-width: 500px;
+    margin-top: 50px;
+}
+
+.dashboard-container {
+    max-width: 700px;
+}
+
+/* Cabeçalhos */
+h1 {
+    color: var(--primary-blue);
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--white);
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    margin-bottom: 2rem;
+}
+
+#profileName {
+    font-weight: bold;
+    color: var(--dark-blue);
+}
+
+/* Formulários */
+form {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    width: 100%;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.2s;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: var(--primary-blue);
+    box-shadow: 0 0 0 3px var(--light-blue);
+}
+
+/* Botões */
+button {
+    width: 100%;
+    padding: 0.8rem;
+    background-color: var(--primary-blue);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+button:hover {
+    background-color: var(--dark-blue);
+    transform: translateY(-1px);
+}
+
+.btn-secondary {
+    background-color: var(--text-light);
+    width: auto;
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+}
+
+/* Cards de Tarefas */
+.posts-container {
+    margin-top: 2rem;
+}
+
+.post-card {
+    background: var(--white);
+    padding: 1.2rem;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    box-shadow: var(--shadow);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-left: 6px solid var(--primary-blue);
+    transition: transform 0.2s;
+}
+
+.post-card.completed {
+    border-left-color: var(--success-green);
+    opacity: 0.7;
+}
+
+.post-card.completed h3 {
+    text-decoration: line-through;
+    color: var(--text-light);
+}
+
+.task-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.task-content input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+.task-text h3 {
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+.task-text p {
+    margin: 5px 0;
+    font-size: 0.9rem;
+    color: var(--text-light);
+}
+
+.task-text small {
+    font-size: 0.75rem;
+    color: #94a3b8;
+}
+
+/* Botão Deletar */
+.delete-btn {
+    background: transparent;
+    color: var(--danger-red);
+    width: auto;
+    padding: 5px;
+}
+
+.delete-btn:hover {
+    background: #fee2e2;
+    color: #b91c1c;
+}
+
+/* Links */
+p {
+    text-align: center;
+    margin-top: 1.2rem;
+    font-size: 0.9rem;
+}
+
+a {
+    color: var(--primary-blue);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.profile-actions {
+    display: flex;
+    align-items: center; 
+    gap: 20px;           
+}
+
+.post-card.completed {
+    opacity: 0.6;
+    border-left-color: var(--success-green) !important;
+    background-color: #f8fafc;
+}
+
+
+.post-card.completed h3,
+.post-card.completed .task-desc {
+    text-decoration: line-through;
+    color: var(--text-light);
+}
+
+
+.post-card.completed input[type="checkbox"] {
+    accent-color: var(--success-green);
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Minhas Tarefas</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <header>
+            <div class="header-left">
+                <h1>Minhas Tarefas</h1>
+                <span id="profileName">Carregando...</span>
+            </div>
+            <div id="profileActions" class="profile-actions">
+                </div>
+        </header>
+
+        <main>
+            <section class="task-form-section">
+                <form id="taskForm">
+                    <h3>Nova Tarefa</h3>
+                    <input type="text" id="taskTitle" placeholder="Título da tarefa..." required>
+                    <textarea id="taskDescription" placeholder="Descrição detalhada (opcional)"></textarea>
+                    <button type="submit" id="addTaskBtn">
+                        <i class="fa-solid fa-plus"></i> Adicionar Tarefa
+                    </button>
+                </form>
+            </section>
+
+            <section class="task-list-section">
+                <h2>Suas Atividades</h2>
+                <div id="userPosts" class="posts-container">
+                    <p class="loading-msg">Buscando tarefas...</p>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="./js/profile.js" defer></script>
+</body>
+</html>

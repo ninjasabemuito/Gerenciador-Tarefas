@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aura TODO - Organize sua rotina</title>
+    <link rel="stylesheet" href="./css/landing.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">Aura<span>TODO</span></div>
+        <div class="nav-links">
+            <a href="login.html" class="btn-login">Entrar</a>
+            <a href="register.html" class="btn-signup">Cadastre-se</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Domine seu dia com clareza.</h1>
+            <p>A ferramenta simples e elegante para gerenciar suas tarefas diárias e aumentar sua produtividade.</p>
+            <div class="hero-btns">
+                <a href="register.html" class="btn-primary">Começar agora — É grátis</a>
+            </div>
+        </div>
+        <div class="hero-image">
+             <i class="fa-solid fa-list-check"></i>
+        </div>
+    </header>
+
+    <section class="features">
+        <div class="feature-card">
+            <i class="fa-solid fa-rocket"></i>
+            <h3>Rápido</h3>
+            <p>Interface veloz para você não perder tempo.</p>
+        </div>
+        <div class="feature-card">
+            <i class="fa-solid fa-lock"></i>
+            <h3>Seguro</h3>
+            <p>Seus dados protegidos com autenticação JWT.</p>
+        </div>
+        <div class="feature-card">
+            <i class="fa-solid fa-cloud"></i>
+            <h3>Sincronizado</h3>
+            <p>Acesse suas tarefas de qualquer lugar.</p>
+        </div>
+    </section>
+
+    <script>
+        // Se o usuário já estiver logado, redireciona para o profile automaticamente
+        if (localStorage.getItem('token')) {
+            window.location.href = 'profile.html';
+        }
+    </script>
+</body>
+</html>

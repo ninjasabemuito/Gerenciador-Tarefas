@@ -1,0 +1,127 @@
+:root {
+    --primary: #2563eb;
+    --dark: #1e293b;
+    --white: #ffffff;
+    --gray: #64748b;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    color: var(--dark);
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 10%;
+    background: transparent;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--primary);
+}
+
+.logo span { color: var(--dark); }
+
+.nav-links a {
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: 600;
+}
+
+.btn-signup {
+    background: var(--primary);
+    color: white !important;
+    padding: 10px 20px;
+    border-radius: 8px;
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5rem 10%;
+    min-height: 70vh;
+}
+
+.hero-content { max-width: 600px; }
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    color: var(--dark);
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    color: var(--gray);
+    margin-bottom: 2rem;
+}
+
+.btn-primary {
+    background: var(--primary);
+    color: white;
+    padding: 15px 30px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    box-shadow: 0 10px 15px -3px rgba(37, 99, 235, 0.3);
+}
+
+.hero-image i {
+    font-size: 15rem;
+    color: var(--primary);
+    opacity: 0.1;
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding: 5rem 10%;
+    background: var(--white);
+}
+
+.feature-card {
+    text-align: center;
+    padding: 20px;
+}
+
+.feature-card i {
+    font-size: 2.5rem;
+    color: var(--primary);
+    margin-bottom: 15px;
+}
+
+.nav-links a,
+.btn-primary {
+    display: inline-block;
+    transition: 
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background-color 0.25s ease;
+}
+
+.nav-links a:hover,
+.btn-primary:hover {
+    transform: translateY(-3px);
+}
+
+.btn-primary:hover {
+    box-shadow: 0 15px 25px -5px rgba(37, 99, 235, 0.4);
+}
+
+.btn-signup:hover {
+    background-color: #1e40af;
+}
+
+.btn-login:hover {
+    color: var(--primary);
+}
